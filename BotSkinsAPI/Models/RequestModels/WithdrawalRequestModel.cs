@@ -7,9 +7,12 @@ namespace BotSkinsAPI.Models.RequestModels
 {
 	public enum WithdrawalMethod
 	{
-		Bitcoin = 1,
-		PayPal = 2,
-		BankWire = 4
+		[ParameterValue(Value = "bitcoin")]
+		Bitcoin,
+		[ParameterValue(Value = "paypal")]
+		PayPal,
+		[ParameterValue(Value = "bank_wire")]
+		BankWire
 	}
 
 	public class WithdrawalRequestModel : RequestModel
