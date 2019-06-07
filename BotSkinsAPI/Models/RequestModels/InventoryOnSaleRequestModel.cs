@@ -5,22 +5,46 @@ using System.Text;
 
 namespace BotSkinsAPI.Models.RequestModels
 {
-	public enum TripleChoice 
+	public enum TripleChoice
 	{
-		No = -1,
-		NeverMind = 0,
-		Yes = 1
+		[ParameterValue(Value = "-1")]
+		No = 1,
+		[ParameterValue(Value = "0")]
+		NeverMind = 2,
+		[ParameterValue(Value = "1")]
+		Yes = 4
+	}
+
+	public enum OrderByType
+	{
+		[ParameterValue(Value = "desc")]
+		Desc = 1,
+
+		[ParameterValue(Value = "asc")]
+		Asc = 2
+	}
+
+	public enum SortByType
+	{
+		[ParameterValue(Value = "created_at")]
+		CreatedAt = 1,
+
+		[ParameterValue(Value = "price")]
+		Price = 2,
+
+		[ParameterValue(Value = "wear_value")]
+		WearValue = 4
 	}
 
 	public class InventoryOnSaleRequestModel : PagedRequestModel
 	{
 		[ParameterName(Name = "sort_by")]
 		[Required(Required =RequiredStatus.Optional)]
-		public string SortBy { get; set; }
+		public SortByType SortBy { get; set; }
 
 		[ParameterName(Name = "order")]
 		[Required(Required = RequiredStatus.Optional)]
-		public string Order { get; set; }
+		public OrderByType Order { get; set; }
 
 		[ParameterName(Name="market_hash_name")]
 		[Required(Required = RequiredStatus.Optional)]

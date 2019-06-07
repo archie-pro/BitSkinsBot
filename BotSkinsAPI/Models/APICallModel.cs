@@ -6,7 +6,7 @@ namespace BotSkinsAPI.Models
 {
 	public class APICallModel
 	{
-		RequestModel RequestModel { get; set; }
-		ResponseModel ResponseModel { get; set; }
+		public RequestModel RequestModel { get; set; }
+		public ResponseModel ResponseModel { get; set; }
 	}
 }
