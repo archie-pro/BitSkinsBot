@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using BotSkinsAPI.Models;
 using Unity;
 
-namespace BotSkinsAPI.Services
+namespace BotSkinsAPI.Helpers
 {
 	public class RequestBuilder : IRequestBuilder
 	{
@@ -14,6 +12,7 @@ namespace BotSkinsAPI.Services
 		public Uri BuildGetRequest(RequestUrlModel requestUrlModel)
 		{
 			UriBuilder uriBuilder = new UriBuilder();
+			uriBuilder.Scheme = "https";
 			uriBuilder.Host = requestUrlModel.Host;
 			uriBuilder.Path = requestUrlModel.Path;
 			uriBuilder.Query = requestUrlModel.Method == CallMethod.Get

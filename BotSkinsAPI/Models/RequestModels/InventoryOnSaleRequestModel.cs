@@ -7,33 +7,33 @@ namespace BotSkinsAPI.Models.RequestModels
 {
 	public enum TripleChoice
 	{
-		[ParameterValue(Value = "-1")]
-		No = 1,
 		[ParameterValue(Value = "0")]
-		NeverMind = 2,
+		NeverMind = 0,
+		[ParameterValue(Value = "-1")]
+		No = 1,	
 		[ParameterValue(Value = "1")]
-		Yes = 4
+		Yes = 2
 	}
 
 	public enum OrderByType
 	{
 		[ParameterValue(Value = "desc")]
-		Desc = 1,
+		Desc = 0,
 
 		[ParameterValue(Value = "asc")]
-		Asc = 2
+		Asc = 1
 	}
 
 	public enum SortByType
 	{
 		[ParameterValue(Value = "created_at")]
-		CreatedAt = 1,
+		CreatedAt = 0,
 
 		[ParameterValue(Value = "price")]
-		Price = 2,
+		Price = 1,
 
 		[ParameterValue(Value = "wear_value")]
-		WearValue = 4
+		WearValue = 2
 	}
 
 	public class InventoryOnSaleRequestModel : PagedRequestModel

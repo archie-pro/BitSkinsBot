@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitSkinsBot", "BitSkinsBot\BitSkinsBot.csproj", "{E08195B3-2756-4EA6-9B1D-E6BCB5B8E06F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotSkinsAPI", "BotSkinsAPI\BotSkinsAPI.csproj", "{7DDA633F-8C2A-424D-934D-EA6FAEDE3EA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BotSkinsAPI", "BotSkinsAPI\BotSkinsAPI.csproj", "{7DDA633F-8C2A-424D-934D-EA6FAEDE3EA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotSkinsAPITest", "BotSkinsAPITest\BotSkinsAPITest.csproj", "{F8DED237-71BD-4B9E-BDBD-3200A0767060}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7DDA633F-8C2A-424D-934D-EA6FAEDE3EA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DDA633F-8C2A-424D-934D-EA6FAEDE3EA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DDA633F-8C2A-424D-934D-EA6FAEDE3EA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8DED237-71BD-4B9E-BDBD-3200A0767060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8DED237-71BD-4B9E-BDBD-3200A0767060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8DED237-71BD-4B9E-BDBD-3200A0767060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8DED237-71BD-4B9E-BDBD-3200A0767060}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

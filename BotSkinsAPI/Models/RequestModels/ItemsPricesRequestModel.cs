@@ -8,7 +8,7 @@ namespace BotSkinsAPI.Models.RequestModels
 {
 	public class ItemsPricesRequestModel : RequestModel
 	{
-		public Tuple<string, string>[] ItemPriceArray { private get; set; } = new Tuple<string, string>[0];
+		public Tuple<string, string>[] ItemPriceArray { get; set; } = new Tuple<string, string>[0];
 
 		[ParameterName(Name = "item_ids")]
 		[Required(Required = RequiredStatus.Required)]
@@ -23,7 +23,8 @@ namespace BotSkinsAPI.Models.RequestModels
 		[ParameterName(Name ="prices")]
 		[Required(Required =RequiredStatus.Required)]
 		public string[] Prices
-		{ get
+		{
+			get
 			{
 				return this.ItemPriceArray?.Select(e => e.Item2).ToArray();
 			}

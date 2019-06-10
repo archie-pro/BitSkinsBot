@@ -6,10 +6,10 @@ namespace BotSkinsAPI.Models.RequestModels
 	{
 		[ParameterName(Name = "page")]
 		[Required(Required = RequiredStatus.Optional)]
-		public int Page { get; set; }
+		public int? Page { get; set; }
 
 		[ParameterName(Name = "per_page")]
 		[Required(Required = RequiredStatus.Optional)]
-		public int PerPage { get; set; }
+		public int? PerPage { get; set; }
 	}
 }

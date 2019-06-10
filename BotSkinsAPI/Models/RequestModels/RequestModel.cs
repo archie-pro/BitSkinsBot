@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using BotSkinsAPI.Attributes;
+using BotSkinsAPI.Helpers;
 using Newtonsoft.Json;
 
 namespace BotSkinsAPI.Models

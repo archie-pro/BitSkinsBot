@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BotSkinsAPI.Models.RequestModels
 {
-	public class SteamPriceRequestModel:RequestModel
+	public class SteamPriceRequestModel : RequestModel
 	{
 		[ParameterName(Name = "market_hash_name")]
 		[Required(Required = RequiredStatus.Required)]

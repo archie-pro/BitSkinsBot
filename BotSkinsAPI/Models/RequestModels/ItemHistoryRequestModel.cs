@@ -9,10 +9,10 @@ namespace BotSkinsAPI.Models.RequestModels
 	{
 		[ParameterName(Name = "names")]
 		[Required(Required = RequiredStatus.Optional)]
-		string[] Names { get; set; }
+		public string[] Names { get; set; }
 
 		[ParameterName(Name = "delimeter")]
 		[Required(Required = RequiredStatus.Optional)]
-		string Delimiter { get; set; }
+		public string Delimiter { get; set; }
 	}
 }

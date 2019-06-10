@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Threading.Tasks;
 
 namespace BotSkinsAPI.Proxies
 {
 	public interface IProxy
 	{
-		string CallGet();
+		Task<string> CallGet(Uri requestUri);
 
-		string CallPost();
+		Task<string> CallPost(Uri requestUri, string requestBody);
 	}
 }

@@ -1,9 +1,7 @@
 ﻿using BotSkinsAPI.Models;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace BotSkinsAPI.Services
+namespace BotSkinsAPI.Helpers
 {
 	public interface IRequestBuilder
 	{
