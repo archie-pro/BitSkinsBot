@@ -1,6 +1,6 @@
 ﻿namespace BotSkinsAPI.Services
 {
-	public interface IBSHistoryService
+	public interface IHistoryService
 	{
 
 	}}

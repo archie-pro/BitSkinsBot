@@ -5,10 +5,10 @@ using System.Text;
 
 namespace BotSkinsAPI.Models.RequestModels
 {
-	public class ItemsRequestModel : RequestBodyModel
+	public class CancelOrdersByIdRequestModel : RequestBodyModel
 	{
-		[ParameterName(Name = "item_ids")]
+		[ParameterName(Name = "buy_order_ids")]
 		[Required(Required = RequiredStatus.Required)]
-		public string[] ItemIds { get; set; }
+		public string[] OrderIds;
 	}
 }

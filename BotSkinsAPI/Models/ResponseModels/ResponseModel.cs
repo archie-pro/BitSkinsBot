@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using BotSkinsAPI.Models.ResponseModels;
+using Newtonsoft.Json;
 
 namespace BotSkinsAPI.Models
 {
@@ -9,9 +8,14 @@ namespace BotSkinsAPI.Models
 		Success,
 		Error
 	}
+
+	[JsonObject]
 	public class ResponseModel
 	{
-		ResponseStatus Status { get; set; }
-		object ResponseBody { get; set; }
+		[JsonProperty(PropertyName = "status")]
+		public ResponseStatus Status { get; set; }
+
+		[JsonProperty(PropertyName = "data")]
+		public ResponseBodyModel ResponseBody { get; set; }
 	}
 }

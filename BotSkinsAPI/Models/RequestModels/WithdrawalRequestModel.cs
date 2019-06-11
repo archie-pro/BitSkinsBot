@@ -15,7 +15,7 @@ namespace BotSkinsAPI.Models.RequestModels
 		BankWire
 	}
 
-	public class WithdrawalRequestModel : RequestModel
+	public class WithdrawalRequestModel : RequestBodyModel
 	{
 		[ParameterName(Name = "amount")]
 		[Required(Required = RequiredStatus.Required)]

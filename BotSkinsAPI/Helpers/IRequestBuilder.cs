@@ -5,9 +5,9 @@ namespace BotSkinsAPI.Helpers
 {
 	public interface IRequestBuilder
 	{
-		Uri BuildGetRequest(RequestUrlModel requestUrlModel);
+		Uri BuildGetRequest(RequestModel requestUrlModel);
 
-		Tuple<Uri, string> BuildPostRequest(RequestUrlModel requestUrlModel);
+		Tuple<Uri, string> BuildPostRequest(RequestModel requestUrlModel);
 
 	}
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BotSkinsAPI.Models.RequestModels
 {
-	public class TradeDetailsRequestModel
+	public class TradeDetailsRequestModel: RequestBodyModel
 	{
 		[ParameterName(Name = "trade_token")]
 		[Required(Required = RequiredStatus.Required)]

@@ -2,7 +2,7 @@
 
 namespace BotSkinsAPI.Models.RequestModels
 {
-	public class PagedRequestModel : RequestModel
+	public class PagedRequestModel : RequestBodyModel
 	{
 		[ParameterName(Name = "page")]
 		[Required(Required = RequiredStatus.Optional)]

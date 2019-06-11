@@ -1,23 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
-using BotSkinsAPI.Models;
 using System.Reflection;
 using System.Linq;
 using BotSkinsAPI.Attributes;
+using BotSkinsAPI.Models.RequestModels;
 
 namespace BotSkinsAPI.Helpers
 {
 	public class QueryBuilder : IQueryBuilder
 	{
 
-		public string BuildQuery(RequestModel model)
+		public string BuildQuery(RequestQueryModel model)
 		{
+			if (model == null)
+			{
+				return string.Empty;
+			}
+
 			IEnumerable<Tuple<string, string>> nameValueList = this.GetNameValuesOfProperties(model); 
 			return this.BuildQueryString(nameValueList);
 		}
 
-		private IEnumerable<Tuple<string, string>> GetNameValuesOfProperties(RequestModel model)
+		private IEnumerable<Tuple<string, string>> GetNameValuesOfProperties(RequestQueryModel model)
 		{
+			return this.GetAroundParamsProperty(model.RequestAuthParams).Concat(this.GetAroundParamsProperty(model.RequestBodyParams));
+		}
+
+		private IEnumerable<Tuple<string,string>> GetAroundParamsProperty(object model)
+		{
+			if (model == null)
+			{
+				return Enumerable.Empty<Tuple<string, string>>();
+			}
+
 			List<Tuple<string, string>> nameValueList = new List<Tuple<string, string>>();
 
 			foreach (var property in model.GetType().GetProperties())
@@ -35,6 +50,7 @@ namespace BotSkinsAPI.Helpers
 					}
 				}
 			}
+
 			return nameValueList;
 		}
 

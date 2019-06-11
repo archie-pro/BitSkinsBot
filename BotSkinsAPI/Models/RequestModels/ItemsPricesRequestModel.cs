@@ -6,7 +6,7 @@ using System.Text;
 
 namespace BotSkinsAPI.Models.RequestModels
 {
-	public class ItemsPricesRequestModel : RequestModel
+	public class ItemsPricesRequestModel : RequestBodyModel
 	{
 		public Tuple<string, string>[] ItemPriceArray { get; set; } = new Tuple<string, string>[0];
 

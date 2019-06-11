@@ -1,9 +1,9 @@
-﻿using BotSkinsAPI.Models;
+﻿using BotSkinsAPI.Models.RequestModels;
 
 namespace BotSkinsAPI.Helpers
 {
 	public interface IQueryBuilder
 	{
-		string BuildQuery(RequestModel model);
+		string BuildQuery(RequestQueryModel model);
 	}
 }
