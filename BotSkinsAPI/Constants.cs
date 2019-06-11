@@ -37,13 +37,13 @@ namespace BotSkinsAPI
 		public static readonly string WithdrawItem = "api/v1/withdraw_item";
 		public static readonly string BumpItem = "api/v1/bump_item";
 
-		public static readonly string CreateBuyOrder = "api/v1/create_buy_order";
+		public static readonly string CreateOrder = "api/v1/create_buy_order";
 		public static readonly string GetExpectedQueuePlaceForOrder = "api/v1/get_expected_place_in_queue_for_new_buy_order";
-		public static readonly string CancelBuyOrdersByOrderId = "api/v1/cancel_buy_orders";
-		public static readonly string CancelBuyOrdersByName = "api/v1/cancel_all_buy_orders";
-		public static readonly string GetAllBuyOrders = "api/v1/get_buy_order_history";
-		public static readonly string GetMarketBuyOrders = "api/v1/get_market_buy_orders";
-		public static readonly string SummarizeMarketBuyOrders = "api/v1/summarize_buy_orders";
+		public static readonly string CancelOrdersByOrderId = "api/v1/cancel_buy_orders";
+		public static readonly string CancelOrdersByName = "api/v1/cancel_all_buy_orders";
+		public static readonly string GetOrdersHistory = "api/v1/get_buy_order_history";
+		public static readonly string GetMarketOrders = "api/v1/get_market_buy_orders";
+		public static readonly string SummarizeMarketOrders = "api/v1/summarize_buy_orders";
 
 		public static readonly ReadOnlyCollection<KeyValuePair<string, CallMethod>> EndpointCallMethods;
 
