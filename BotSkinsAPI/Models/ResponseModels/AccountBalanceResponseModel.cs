@@ -1,12 +1,9 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BotSkinsAPI.Models.ResponseModels
 {
 	[JsonObject]
-	public class GetAccountResponseModel : ResponseBodyModel
+	public class AccountBalanceResponseModel : ResponseBodyModel
 	{
 		[JsonProperty(PropertyName = "available_balance")]
 		public double AvailiableBalance { get; set; }

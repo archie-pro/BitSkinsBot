@@ -13,6 +13,7 @@ namespace BotSkinsAPI
 		public static readonly string GetAccountBalance = "api/v1/get_account_balance/";
 		public static readonly string GetAccountInventory = "api/v1/get_my_inventory";
 		public static readonly string RequestWithdrawal = "api/v1/request_withdrawal";
+		public static readonly string GetMoneyEvents = "api/v1/get_money_events";
 
 		public static readonly string GetAllItemPrices = "api/v1/get_all_item_prices";
 		public static readonly string GetOnSaleItemOriginalPrices = "api/v1/get_price_data_for_items_on_sale";
@@ -23,8 +24,7 @@ namespace BotSkinsAPI
 		public static readonly string GetTradeDetails = "api/v1/get_trade_details";
 		public static readonly string GetItemSalesInfo = "api/v1/get_sales_info";
 		public static readonly string GetSteamPriceData = "get_steam_price_data";
-
-		public static readonly string GetMoneyEvents = "api/v1/get_money_events";
+		
 		public static readonly string GetBuyHistory = "api/v1/get_buy_history";
 		public static readonly string GetSellHistory = "api/v1/get_sell_history";
 		public static readonly string GetItemHistory = "api/v1/get_item_history";
@@ -58,7 +58,8 @@ namespace BotSkinsAPI
 			};
 			IEnumerable<string> postEndpoints = new string[]
 			{
-				RequestWithdrawal, BuyItem, SetItemForSale, ModifySaleItem, RemoveSaleItem, RelistItem, WithdrawItem, BumpItem
+				RequestWithdrawal, BuyItem, SetItemForSale, ModifySaleItem, RemoveSaleItem, RelistItem, WithdrawItem, BumpItem,
+				CreateOrder, GetExpectedQueuePlaceForOrder, CancelOrdersByOrderId, CancelOrdersByName, GetOrdersHistory, GetMarketOrders, SummarizeMarketOrders
 			};
 
 			var endpointList = getEndpoints.Select(e => new KeyValuePair<string, CallMethod>(e, CallMethod.Get)).
