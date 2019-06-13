@@ -7,22 +7,18 @@ namespace BotSkinsAPI.Services
 {
 	public interface IMarketDataService
 	{
-		ItemPricesResponseModel GetAllItemPrices();
+		ItemPricesResponseModel GetSuggestedItemPrices();
 
-		ItemPricesResponseModel GetOnSaleItemPrices();
+		ItemPricesForkResponseModel GetSellItemsPriceFork();
 
-		ItemPricesResponseModel GetSomeOnSaleItemPrices();
+		ItemPricesResponseModel GetFilteredSellItems();
 
-		ItemPricesResponseModel GetOnSaleItemOriginalPrices();
+		ItemsPricesByIdResponseModel GetSellItemsById();
 
 		ItemPricesResponseModel GetResetPriceItems();
 
 		TradeOffersResponseModel GetTradeOffers();
 
 		TradeDetailsResponseModel GetTradeDetails();
-
-		ItemPricesResponseModel GetItemSalesInfo();
-
-		ItemPricesResponseModel GetSteamPrices();
 	}
 }

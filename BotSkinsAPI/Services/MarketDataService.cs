@@ -7,22 +7,22 @@ namespace BotSkinsAPI.Services
 {
 	public class MarketDataService : IMarketDataService
 	{
-		public ItemPricesResponseModel GetAllItemPrices()
+		public ItemPricesResponseModel GetSuggestedItemPrices()
 		{
 			throw new NotImplementedException();
 		}
 
-		public ItemPricesResponseModel GetItemSalesInfo()
+		public ItemPricesForkResponseModel GetSellItemsPriceFork()
 		{
 			throw new NotImplementedException();
 		}
 
-		public ItemPricesResponseModel GetOnSaleItemOriginalPrices()
+		public ItemPricesResponseModel GetFilteredSellItems()
 		{
 			throw new NotImplementedException();
 		}
 
-		public ItemPricesResponseModel GetOnSaleItemPrices()
+		public ItemsPricesByIdResponseModel GetSellItemsById()
 		{
 			throw new NotImplementedException();
 		}
@@ -32,15 +32,7 @@ namespace BotSkinsAPI.Services
 			throw new NotImplementedException();
 		}
 
-		public ItemPricesResponseModel GetSomeOnSaleItemPrices()
-		{
-			throw new NotImplementedException();
-		}
-
-		public ItemPricesResponseModel GetSteamPrices()
-		{
-			throw new NotImplementedException();
-		}
+		
 
 		public TradeDetailsResponseModel GetTradeDetails()
 		{
