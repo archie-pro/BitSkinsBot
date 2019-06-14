@@ -41,7 +41,7 @@ namespace BotSkinsAPI
 		public static readonly string GetExpectedQueuePlaceForOrder = "api/v1/get_expected_place_in_queue_for_new_buy_order";
 		public static readonly string CancelOrdersByOrderId = "api/v1/cancel_buy_orders";
 		public static readonly string CancelOrdersByName = "api/v1/cancel_all_buy_orders";
-		public static readonly string GetOrdersHistory = "api/v1/get_buy_order_history";
+		public static readonly string GetAccountOrders = "api/v1/get_buy_order_history";
 		public static readonly string GetMarketOrders = "api/v1/get_market_buy_orders";
 		public static readonly string SummarizeMarketOrders = "api/v1/summarize_buy_orders";
 
@@ -58,7 +58,7 @@ namespace BotSkinsAPI
 			IEnumerable<string> postEndpoints = new string[]
 			{
 				RequestWithdrawal, BuyItem, SetItemForSale, ModifySaleItem, RemoveSaleItem, RelistItem, WithdrawItem, BumpItem,
-				CreateOrder, GetExpectedQueuePlaceForOrder, CancelOrdersByOrderId, CancelOrdersByName, GetOrdersHistory, GetMarketOrders, SummarizeMarketOrders
+				CreateOrder, GetExpectedQueuePlaceForOrder, CancelOrdersByOrderId, CancelOrdersByName, GetAccountOrders, GetMarketOrders, SummarizeMarketOrders
 			};
 
 			var endpointList = getEndpoints.Select(e => new KeyValuePair<string, CallMethod>(e, CallMethod.Get)).

@@ -35,17 +35,17 @@ namespace BotSkinsAPI.Services
 			return response;
 		}
 
-		public ResponseBodyModel GetMarketOrders(string marketHashName, int? page)
+		public GetMarketOrdersResponseModel GetMarketOrders(string marketHashName, int? page)
 		{
-			IOperation<GetOrdersHistoryRequestModel, ResponseBodyModel> operation = BotConfigurator.Container.Resolve<Operation<GetOrdersHistoryRequestModel, ResponseBodyModel>>();
-			ResponseBodyModel response = operation.DoOperation(Constants.GetMarketOrders, new GetOrdersHistoryRequestModel() { MarketHashName = marketHashName, Page = page});
+			IOperation<GetOrdersRequestModel, GetMarketOrdersResponseModel> operation = BotConfigurator.Container.Resolve<Operation<GetOrdersRequestModel, GetMarketOrdersResponseModel>>();
+			GetMarketOrdersResponseModel response = operation.DoOperation(Constants.GetMarketOrders, new GetOrdersRequestModel() { MarketHashName = marketHashName, Page = page});
 			return response;
 		}
 
 		public ResponseBodyModel GetOrderHistory(string marketHashName = null, int? page = null, OrderType type = OrderType.All)
 		{
-			IOperation<GetOrdersHistoryRequestModel, ResponseBodyModel> operation = BotConfigurator.Container.Resolve<Operation<GetOrdersHistoryRequestModel, ResponseBodyModel>>();
-			ResponseBodyModel response = operation.DoOperation(Constants.GetOrdersHistory, new GetOrdersHistoryRequestModel() { MarketHashName = marketHashName, Page = page, Type = type });
+			IOperation<GetOrdersRequestModel, ResponseBodyModel> operation = BotConfigurator.Container.Resolve<Operation<GetOrdersRequestModel, ResponseBodyModel>>();
+			ResponseBodyModel response = operation.DoOperation(Constants.GetAccountOrders, new GetOrdersRequestModel() { MarketHashName = marketHashName, Page = page, Type = type });
 			return response;
 		}
 

@@ -1,4 +1,5 @@
-﻿using BotSkinsAPI.Models.ResponseModels;
+﻿using BotSkinsAPI.Models.RequestModels;
+using BotSkinsAPI.Models.ResponseModels;
 
 namespace BotSkinsAPI.Services
 {
@@ -10,6 +11,10 @@ namespace BotSkinsAPI.Services
 
 		AccountInventoryResponseModel GetAccountInventory();
 
-		RequestWithdrawalResponseModel RequestWithdrawal();
+		RequestWithdrawalResponseModel RequestWithdrawal(double amount, WithdrawalMethod withdrawalMethod);
+
+		TradeOffersResponseModel GetTradeOffers();
+
+		TradeDetailsResponseModel GetTradeDetails();
 	}
 }

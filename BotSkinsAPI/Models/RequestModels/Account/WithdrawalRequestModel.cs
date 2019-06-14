@@ -19,7 +19,7 @@ namespace BotSkinsAPI.Models.RequestModels
 	{
 		[ParameterName(Name = "amount")]
 		[Required(Required = RequiredStatus.Required)]
-		public string Amount { get; set; }
+		public double Amount { get; set; }
 
 		[ParameterName(Name = "withdrawal_method")]
 		[Required(Required = RequiredStatus.Required)]

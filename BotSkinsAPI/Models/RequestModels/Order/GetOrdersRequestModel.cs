@@ -1,7 +1,4 @@
 ﻿using BotSkinsAPI.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BotSkinsAPI.Models.RequestModels
 {
@@ -23,7 +20,7 @@ namespace BotSkinsAPI.Models.RequestModels
 		CancelledBySystem
 	}
 
-	public class GetOrdersHistoryRequestModel : RequestBodyModel
+	public class GetOrdersRequestModel : RequestBodyModel
 	{
 		[ParameterName(Name = "type")]
 		[Required(Required = RequiredStatus.Optional)]

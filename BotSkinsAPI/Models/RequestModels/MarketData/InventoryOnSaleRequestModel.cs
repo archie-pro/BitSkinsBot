@@ -52,11 +52,11 @@ namespace BotSkinsAPI.Models.RequestModels
 
 		[ParameterName(Name = "min_price")]
 		[Required(Required = RequiredStatus.Optional)]
-		public string MinPrice { get; set; }
+		public double? MinPrice { get; set; }
 
 		[ParameterName(Name = "max_price")]
 		[Required(Required = RequiredStatus.Optional)]
-		public string MaxPrice { get; set; }
+		public double? MaxPrice { get; set; }
 
 		[ParameterName(Name = "has_stickers")]
 		[Required(Required = RequiredStatus.Optional)]

@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace BotSkinsAPI.Models.Models
+namespace BotSkinsAPI.Models.ResponseModels
 {
 	public class Item
 	{

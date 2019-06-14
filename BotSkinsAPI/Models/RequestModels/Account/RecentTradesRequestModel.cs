@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BotSkinsAPI.Models.RequestModels
 {
-	public class RecentOffersRequestModel : RequestBodyModel
+	public class RecentTradesRequestModel : RequestBodyModel
 	{
 		[ParameterName(Name = ("active_only"))]
 		[Required(Required = RequiredStatus.Optional)]

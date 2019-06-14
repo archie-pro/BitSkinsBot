@@ -28,10 +28,20 @@ namespace BotSkinsAPI.Services
 			return response;
 		}
 
-		public RequestWithdrawalResponseModel RequestWithdrawal()
+		public TradeDetailsResponseModel GetTradeDetails()
 		{
-			IOperation<RequestBodyModel, RequestWithdrawalResponseModel> operation = BotConfigurator.Container.Resolve<Operation<RequestBodyModel, RequestWithdrawalResponseModel>>();
-			RequestWithdrawalResponseModel response = operation.DoOperation(Constants.RequestWithdrawal, new RequestBodyModel());
+			throw new System.NotImplementedException();
+		}
+
+		public TradeOffersResponseModel GetTradeOffers()
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public RequestWithdrawalResponseModel RequestWithdrawal(double amount, WithdrawalMethod withdrawalMethod)
+		{
+			IOperation<WithdrawalRequestModel, RequestWithdrawalResponseModel> operation = BotConfigurator.Container.Resolve<Operation<WithdrawalRequestModel, RequestWithdrawalResponseModel>>();
+			RequestWithdrawalResponseModel response = operation.DoOperation(Constants.RequestWithdrawal, new WithdrawalRequestModel() {Amount = amount, WithdrawalMethod = withdrawalMethod });
 			return response;
 		}
 	}
